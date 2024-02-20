@@ -86,7 +86,7 @@ function Item({ nome, preco, descricao, }: { nome: string; preco: number; descri
             <Text style={CustomItem.preco}>0</Text>
           </View>
         </View>
-        <Botao valor="Adicionar ao Carrinho" acao={() => {}}/>
+        <Botao valor="Adicionar" acao={() => {}}/>
       </View>
       <View style={CustomItem.divisor}/>
     </>
