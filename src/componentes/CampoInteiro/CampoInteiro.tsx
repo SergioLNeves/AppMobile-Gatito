@@ -14,7 +14,7 @@ const EstilosPadrao = StyleSheet.create({
 
 interface CampoInteiroProps {
     valor: number;
-    acao: (novaQuantidade: number) => any; 
+    acao: (novaQuantidade: number) => any;
     estilos: any
 }
 
@@ -24,7 +24,7 @@ export default function CampoInteiro({ valor, estilos, acao }: CampoInteiroProps
         const valor = novoValor && novoValor.match(/^[0-9]*$/) ? Number(novoValor.replace(/^(0)(.+)/, '$2')) : 0;
         acao(valor);
     };
-    
+
 
     const numeroEmTexto = String(valor);
 

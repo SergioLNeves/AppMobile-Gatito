@@ -21,7 +21,7 @@ export const CustomItem = StyleSheet.create({
     nome: {
         color: cores.laranja,
         fontWeight: "bold",
-        fontSize: 16,
+        fontSize: 20,
     },
     calculo: {
         color: cores.escuro,
@@ -32,7 +32,6 @@ export const CustomItem = StyleSheet.create({
         color: cores.roxo,
         fontSize: 16,
         fontWeight: "bold",
-        textAlign: "right",
     },
     divisor: {
         marginHorizontal: 24,
@@ -63,10 +62,11 @@ export const CustomItem = StyleSheet.create({
     },
 });
 
-export function CustomButao(pequeno= false, invertido= false) {
+export function CustomButao(pequeno = false, invertido = false) {
     return StyleSheet.create({
         botao: {
             width: 140,
+            borderRadius: 50,
             paddingVertical: pequeno ? 3 : 9,
             paddingHorizontal: 20,
             backgroundColor: invertido ? cores.laranja : cores.roxo,
