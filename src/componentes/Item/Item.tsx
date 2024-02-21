@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import {
-    StyleSheet,
     Text,
     View,
 } from "react-native";
 
-import { CustomItem } from "../../estilos";
+import { CustomItem, Container } from "../../estilos";
 import CampoInteiro from "../../componentes/CampoInteiro/CampoInteiro";
 import Botao from "../../componentes/Botao/Botao";
 import { TouchableOpacity } from "react-native";
@@ -61,26 +60,7 @@ export const servicos = [
     }
 ]
 
-function Container(children: any, style: any) {
-    const styles = StyleSheet.create({
-        dflex: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-        },
-        padding1: {
-            paddingHorizontal: 20,
-            paddingVertical: 10,
-        },
-    });
 
-    return (
-        <View style={[styles.dflex, styles.padding1, style]}>
-            {children}
-        </View>
-    );
-}
 
 export default function Item({ nome, preco, descricao, }: { nome: string; preco: number; descricao: string; }) {
     const [quantidade, setQuantidade] = useState(0);

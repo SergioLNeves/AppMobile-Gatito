@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FlatList,
   SafeAreaView,
   StatusBar,
-  StyleSheet,
-  Text,
-  View,
 } from "react-native";
 
 import Item, { servicos } from "../../componentes/Item/Item";
