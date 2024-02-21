@@ -19,15 +19,12 @@ interface CampoInteiroProps {
 }
 
 export default function CampoInteiro({ valor, estilos, acao }: CampoInteiroProps) {
+
     const atualiza = (novoValor: string) => {
-        if (!novoValor) return;
-        const verificaInteiro = novoValor.match(/^[0-9]*$/);
-        if (!verificaInteiro) return;
-
-        const removeZeroEsquerda = novoValor.replace(/^(0)(.+)/, '$2');
-
-        acao(Number(removeZeroEsquerda)); // Convertido para número antes de chamar acao
+        const valor = novoValor && novoValor.match(/^[0-9]*$/) ? Number(novoValor.replace(/^(0)(.+)/, '$2')) : 0;
+        acao(valor);
     };
+    
 
     const numeroEmTexto = String(valor);
 
