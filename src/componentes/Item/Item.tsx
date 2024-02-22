@@ -4,7 +4,7 @@ import {
     View,
 } from "react-native";
 
-import { CustomItem, Container } from "../../estilos";
+import { CustomItem } from "../../estilos";
 import CampoInteiro from "../../componentes/CampoInteiro/CampoInteiro";
 import Botao from "../../componentes/Botao/Botao";
 import { TouchableOpacity } from "react-native";
@@ -63,18 +63,22 @@ export const servicos = [
 
 
 export default function Item({ nome, preco, descricao, }: { nome: string; preco: number; descricao: string; }) {
+    
     const [quantidade, setQuantidade] = useState(0);
-    const [total, setTotal] = useState(preco)
-    const [expandir, setExpandir] = useState(false)
-
-    const calculaTotal = (novaQuantidade: any) => {
-        setTotal(novaQuantidade * preco)
-    }
     const atualizaQuantidadeTotal = (novaQuantidade: any) => {
         setQuantidade(novaQuantidade);
         calculaTotal(novaQuantidade)
     }
 
+
+    const [total, setTotal] = useState(preco)
+    const calculaTotal = (novaQuantidade: any) => {
+        setTotal(novaQuantidade * preco)
+    }
+  
+
+
+    const [expandir, setExpandir] = useState(false)
     const inverteExpandir = () => {
         setExpandir(!expandir);
         atualizaQuantidadeTotal(1);
@@ -84,10 +88,10 @@ export default function Item({ nome, preco, descricao, }: { nome: string; preco:
     return (
         <>
             <TouchableOpacity style={CustomItem.informacao} onPress={inverteExpandir}>
-                <Container style={{ display: 'flex' }}>
-                    <Text style={CustomItem.nome}>{nome}</Text>
+                <View >
+                    <Text style={CustomItem.nome}>{nome.toUpperCase()}</Text>
                     <Text style={CustomItem.preco}>{preco}</Text>
-                </Container>
+                </View>
                 <Text style={CustomItem.descricao}>{descricao}</Text>
 
             </TouchableOpacity>

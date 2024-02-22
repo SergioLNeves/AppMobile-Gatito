@@ -13,7 +13,12 @@
     "expo-status-bar": "~1.11.1",
     "intl": "^1.2.5",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-native": "0.73.4",
+    "styled-components": "^6.1.8",
+    "styled-theming": "^2.2.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

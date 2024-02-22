@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     preencher: {
@@ -85,25 +85,4 @@ export function CustomButao(pequeno = false, invertido = false) {
             color: invertido ? cores.roxo : cores.laranja,
         }
     });
-}
-
-export function Container(children: any, style: any) {
-    const styles = StyleSheet.create({
-        dflex: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-        },
-        padding1: {
-            paddingHorizontal: 20,
-            paddingVertical: 10,
-        },
-    });
-
-    return (
-        <View style={[styles.dflex, styles.padding1, style]}>
-            {children}
-        </View>
-    );
 }

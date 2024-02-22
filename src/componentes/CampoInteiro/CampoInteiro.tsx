@@ -21,7 +21,7 @@ interface CampoInteiroProps {
 export default function CampoInteiro({ valor, estilos, acao }: CampoInteiroProps) {
 
     const atualiza = (novoValor: string) => {
-        const valor = novoValor && novoValor.match(/^[0-9]*$/) ? Number(novoValor.replace(/^(0)(.+)/, '$2')) : 0;
+        const valor = novoValor && novoValor.match(/^[0-9]*$/) ? Number(novoValor.replace(/^(0)(.+)/, '$2')) : 1;
         acao(valor);
     };
 
