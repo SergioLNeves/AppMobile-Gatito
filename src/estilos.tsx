@@ -82,7 +82,8 @@ export function CustomButao(pequeno = false, invertido = false) {
         valor: {
             fontWeight: 'bold',
             textAlign: 'center',
-            color: invertido ? cores.roxo : cores.laranja,
+            color: invertido? cores.roxo : cores.laranja,
         }
     });
 }
+

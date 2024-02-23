@@ -1,5 +1,4 @@
-import React from "react";
-import { TextInput, TextInputProps } from "react-native";
+import { TextInput } from "react-native";
 import { StyleSheet } from "react-native";
 import { cores } from "../../estilos";
 
