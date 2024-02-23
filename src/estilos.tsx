@@ -115,3 +115,5 @@ export const EstiloStatusCarrinho = StyleSheet.create({
       alignItems: 'flex-end',
     },
   });
+
+  
