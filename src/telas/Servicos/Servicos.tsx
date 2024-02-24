@@ -1,11 +1,11 @@
-import { SafeAreaView, StatusBar, FlatList } from "react-native";
+import { StatusBar, FlatList } from "react-native";
 import { ItemServicos } from "./Item/Item";
 
 import { servicosMock } from "../../mock/servicos";
 
 export const Servicos = () => {
     return (
-      <SafeAreaView>
+      <>
         <StatusBar />
         <FlatList
           data={servicosMock}
@@ -13,6 +13,6 @@ export const Servicos = () => {
           renderItem={({ item }) => <ItemServicos {...item} />}
           keyExtractor={({ id }) => String(id)}
         />
-      </SafeAreaView>
+      </>
     );
   };

@@ -82,38 +82,48 @@ export function CustomButao(pequeno = false, invertido = false) {
         valor: {
             fontWeight: 'bold',
             textAlign: 'center',
-            color: invertido? cores.roxo : cores.laranja,
+            color: invertido ? cores.roxo : cores.laranja,
         }
     });
 }
 
 export const EstiloStatusCarrinho = StyleSheet.create({
     conteudo: {
-      backgroundColor: cores.roxo,
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      padding: 24,
+        backgroundColor: cores.roxo,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        padding: 24,
     },
     total: {
-      alignItems: 'center',
+        alignItems: 'center',
     },
     descricao: {
-      fontSize: 16,
-      color: cores.claro,
-      fontWeight: 'bold',
+        fontSize: 16,
+        color: cores.claro,
+        fontWeight: 'bold',
     },
     valor: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      marginVertical: 6,
-      color: cores.laranja,
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginVertical: 6,
+        color: cores.laranja,
     },
     botao: {
-      flexGrow: 1,
-      alignItems: 'flex-end',
+        flexGrow: 1,
+        alignItems: 'flex-end',
     },
-  });
+});
 
-  
+
+export const EstiloTelaPadrao = StyleSheet.create({
+    ajusteTela: {
+        flex: 1,
+        backgroundColor: cores.roxo
+    },
+    ajusteTelaBaixo: {
+        flex: 0,
+        backgroundColor: cores.laranja
+    }
+})

@@ -1,8 +1,9 @@
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR'
-import { Carrinho } from './src/telas/Carrinho/Carrinho';
 import Rotas from './src/Rotas';
+import { TelaPadrao } from './src/componentes/TelaPadrao/TelaPadrao';
 
 export default function App() {
-  return <Rotas/>;
+  
+  return <TelaPadrao childrean={<Rotas/>} /> ;
 }
